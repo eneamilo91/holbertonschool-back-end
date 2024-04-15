@@ -24,7 +24,7 @@ if __name__ == "__main__":
         if todo["userId"] == int(argv[1]):
             user_todos.append(todo)
 
-with open(f"{user_id}.csv", 'w') as csv:
+    with open(f"{user_id}.csv", 'w') as csv:
         for i, todo in enumerate(user_todos):
             first = f'"{user_id}","{user_name}",'
             csv.write(f'{first}"{todo["completed"]}","{todo["title"]}"\n')
