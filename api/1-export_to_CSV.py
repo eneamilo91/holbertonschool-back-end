@@ -15,7 +15,7 @@ if __name__ == "__main__":
     user_id = argv[1]
     response = requests.get(f"{URL}users/{argv[1]}")
     user = response.json()
-    user_name = user['name']
+    user_name = user['username']
 
     response = requests.get(f"{URL}todos")
     all_todos = response.json()
